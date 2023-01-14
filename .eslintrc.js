@@ -44,6 +44,7 @@ module.exports = {
     'jsx-a11y/no-autofocus': 0,
     'jsx-a11y/no-static-element-interactions': 0,
     'react/no-array-index-key': 0,
+    'jsx-quotes': ['error', 'prefer-single'],
     'jsx-a11y/anchor-is-valid': [
       'error',
       {
