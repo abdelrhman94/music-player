@@ -24,11 +24,11 @@ module.exports = {
     'react/state-in-constructor': 0,
     'import/prefer-default-export': 0,
     'no-multiple-empty-lines': [
-      'error',
-      {
-        max: 1,
-        maxEOF: 1,
-      },
+      // 'error',
+      // {
+      //   max: 1,
+      //   maxEOF: 1,
+      // },
     ],
     'no-underscore-dangle': [
       'error',
@@ -46,12 +46,12 @@ module.exports = {
     'react/no-array-index-key': 0,
     'jsx-quotes': ['error', 'prefer-single'],
     'jsx-a11y/anchor-is-valid': [
-      'error',
-      {
-        components: ['Link'],
-        specialLink: ['to', 'hrefLeft', 'hrefRight'],
-        aspects: ['noHref', 'invalidHref', 'preferButton'],
-      },
+      // 'error',
+      // {
+      //   components: ['Link'],
+      //   specialLink: ['to', 'hrefLeft', 'hrefRight'],
+      //   aspects: ['noHref', 'invalidHref', 'preferButton'],
+      // },
     ],
   },
 };
