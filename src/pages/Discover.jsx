@@ -2,10 +2,11 @@ import { Error, Loader, SongCard } from '../components';
 import { genres } from '../assets/constants';
 
 import { useGetTopChartsQuery } from '../redux/services/shazamCore';
+import { useState } from 'react';
 
 const Discover = () => {
   const { data, isFetching, error } = useGetTopChartsQuery();
-  const genreTitle = 'Pop';
+  const [genreTitle, setGenreTitle] = useState('Pop');
 
   if (isFetching) return <Loader title='Loading songs...' />;
   if (error) return <Error />;
@@ -17,12 +18,12 @@ const Discover = () => {
           Discover {genreTitle}
         </h2>
         <select
-          onChange={() => {}}
-          value=''
+          onChange={(event) => { setGenreTitle(event.target.value)}}
+          value={genreTitle}
           className='bg-black text-gray-300 p-3 text-sm rounded-lg outline-none sm:mt-0 mt-5 '
         >
           {genres.map((genre) => (
-            <option key={genre.value} value={genre.value}>
+            <option key={genre.value} value={genre.title}>
               {genre.title}
             </option>
           ))}
